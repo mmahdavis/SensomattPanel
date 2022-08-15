@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/icon.css' %}" />
+        <script src="{% static 'iconify.min.js' %}"></script>
+
+        <title>PANEL</title>
+    </head>
+    <body>
+
+        <div class="row">
+          <!-- SIDE MENU -->
+            <div class="col-md-3">
+              <img class="logo" src="{% static 'img/logo.png' %}" alt="sensomatt logo" style='width:20%; margin: 10px'/>
+                <ul class="list-group menu">
+                  <a class="list-group-item list-group-item-action" href="/panel/">Dashboard</a>
+                  <a class="list-group-item list-group-item-action {% if value == 'beds' %} active {% endif %}" href="/panel/beds/show/">ICU Beds</a>
+                      {% if value == 'bed_history' %}
+                      <ul class="list-group-item border-top-0">
+                          <a class="list-group-item list-group-item-action active" href="">History</a>
+                      </ul>
+                      {% endif %}
+                  <a class="list-group-item list-group-item-action {% if value == 'nurses' %} active {% endif %}" href="/panel/nurses/show/">ICU Nurse</a>
+                      <!-- <ul class="list-group-item border-top-0">
+                          <a class="list-group-item list-group-item-action" href="">Manage</a>
+                          <a class="list-group-item list-group-item-action" href="">Change access</a>
+                      </ul> -->
+                  <a class="list-group-item list-group-item-action {% if value == 'patients' %} active {% endif %}" href="/panel/patients/show">ICU Patient</a>
+                  <!-- <ul class="list-group-item border-top-0">
+                    <a class="list-group-item list-group-item-action" href="">Manage</a>
+                  </ul> -->
+                  <a class="list-group-item list-group-item-action" href="">SMS</a>
+                  <a class="list-group-item list-group-item-action" href="">PAGER</a>
+                </ul>
+            </div>
+          <!-- RIGHT PANEL -->
+            <div class="col-md-9 content">
+              <!-- TOP BUTTON -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="/panel/nurses/new/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Nurse <span class="iconify" data-icon="typcn-user-add-outline"></span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/panel/beds/new/history/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed History <span class="iconify" data-icon="typcn:calendar"></span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/panel/beds/new" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed <span class="iconify" data-icon="typcn:beaker"></span></a>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                <!-- Search -->
+                  {% if value != "bed_history" %}
+                    <div class="col-md-12">
+                        <form style="width:100%" action="" method="post">{% csrf_token %}
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text"><span class="iconify" data-icon="typcn:filter"></span></div>
+                                </div>
+                                <input type="text" class="form-control" name="data" placeholder="Search...">
+                                {% if search %}
+                                  {% if value == 'beds' %}
+                                    <div class="input-group-prepend">
+                                        <button onclick="location.href='/panel/beds/show'" class="btn btn-outline-secondary" type="button"><span class="iconify" data-icon="typcn:times"></span></button>
+                                    </div>
+                                  {% elif value == 'nurses' %}
+                                    <div class="input-group-prepend">
+                                        <button onclick="location.href='/panel/nurses/show'" class="btn btn-outline-secondary" type="button"><span class="iconify" data-icon="typcn:times"></span></button>
+                                    </div>
+                                  {% elif value == 'patients' %}
+                                    <div class="input-group-prepend">
+                                        <button onclick="location.href='/panel/patients/show'" class="btn btn-outline-secondary" type="button"><span class="iconify" data-icon="typcn:times"></span></button>
+                                    </div>
+                                  {% endif %}
+                                {% endif %}
+                            </div>
+                        </form>
+                    </div>
+                    <br />
+                    <br />
+                  {% endif %}
+                  <!-- CONTENT -->
+                    <div class="col-md-12">
+                      {% if value == 'beds' %}
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Bed number</th>
+                                <th scope="col">Bed nurse</th>
+                                <th scope="col">Bed Person</th>
+                                <th scope="col">Bed sore</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                                <th scope="col">History</th>
+                            </tr>
+                                {% for i in bed %}
+                            <tr>
+                                <td class="w-25" scope="row">
+                                    bed number: {{ i.1 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                    {{ i.2 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                    {{ i.3 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                  {% if i.4 %}
+                                    <img class="img" src="/media/{{ i.4 }}">
+                                  {% else %}
+                                    <img class="img" src="/media/bedsores/default.jpg">
+                                  {% endif %}
+                                </td>
+                                <td scope="row"><a href="../edit/{{ i.0 }}"><i class="material-icons">edit</i></a></td>
+                                <td scope="row"><a onclick="return confirm('Are you sure you want to delete this?')" href="../delete/{{ i.0 }}"><i class="material-icons">delete</i></a></td>
+                                <td scope="row"><a href="history/{{ i.0 }}"><i class="material-icons">history</i></a></td>
+                            </tr>
+                                {% endfor %}
+                        </table>
+                      {% elif value == 'bed_history' %}
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Bed number</td>
+                                <th scope="col">date</td>
+                                <th scope="col">Bed person</td>
+                                <th scope="col">sickness</td>
+                                <th scope="col">Bed nurse</td>
+                                <th scope="col">Edit</td>
+                                <th scope="col">Delete</td>
+                            </tr>
+                                {% for i in bedhistory %}
+                            <tr>
+                                <td class="" scope="row">
+                                    bed number: {{ i.1 }}
+                                </td>
+                                <td class="" scope="row">
+                                    {{ i.2 }}
+                                </td>
+                                <td class="" scope="row">
+                                    {{ i.3 }}
+                                </td>
+                                <td class="" scope="row">
+                                    {{ i.4 }}
+                                </td>
+                                <td class="" scope="row">
+                                    {{ i.5 }}
+                                </td>
+                                <td scope="row"><a href="../../edit/history/{{ i.0 }}"><i class="material-icons">edit</i></a></td>
+                                <td scope="row"><a onclick="return confirm('Are you sure you want to delete this?')" href="../../history/delete/{{ i.0 }}"><i class="material-icons">delete</i></a></td>
+                            </tr>
+                                {% endfor %}
+                        </table>
+                      {% elif value == 'nurses' %}
+                        <table class="table table-striped">
+                            <tr>
+                                <th scope="col">Name</td>
+                                <th scope="col">Phone</td>
+                                <th scope="col">Username</td>
+                                <th scope="col">Shift</td>
+                                <th scope="col">Edit</td>
+                                <th scope="col">Delete</td>
+                            </tr>
+                                {% for i in nurse %}
+                            <tr>
+                                <td class="w-25" scope="row">
+                                    {{ i.1 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                    {{ i.2 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                    {{ i.3 }}
+                                </td>
+                                <td class="w-25" scope="row">
+                                  {% if i.4 == 'D' %}
+                                    day
+                                  {% elif i.4 == 'N' %}
+                                    Night
+                                  {% elif i.4 == 'LN' %}
+                                    Late Night
+                                  {% endif %}
+                                </td>
+                                <td scope="row"><a href="../edit/{{ i.0 }}"><i class="material-icons">edit</i></a></td>
+                                <td scope="row"><a onclick="return confirm('Are you sure you want to delete this?')" href="../delete/{{ i.0 }}"><i class="material-icons">delete</i></a></td>
+                            </tr>
+                                {% endfor %}
+                        </table>
+                      {% elif value == 'patients' %}
+                        <table class="table table-striped">
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Mobile</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Sickness</th>
+                            <th scope="col">Bed</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                          {% for i in patients %}
+                          <tr>
+                            <td class="" scope="row">
+                              {{ i.1 }}
+                            </td>
+                            <td class="" scope="row">
+                              {{ i.2 }}
+                            </td>
+                            <td class="" scope="row">
+                              {{ i.3 }}
+                            </td>
+                            <td class="" scope="row">
+                              {{ i.4 }}
+                            </td>
+                            <td class="" scope="row">
+                              {{ i.5 }}
+                            </td>
+                            <td class="" scope="row">
+                              {{ i.6 }}
+                            </td>
+                            <td style="width:8%" scope="row"><a href="../../patients/edit/{{ i.0 }}"><i class="material-icons">edit</i></a></td>
+                            <td style="width:8%" scope="row"><a onclick="return confirm('Are you sure you want to delete this?')" href="../../patients/delete/{{ i.0 }}"><i class="material-icons">delete</i></a></td>
+                          </tr>
+                          {% endfor %}
+                        </table>
+                      {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

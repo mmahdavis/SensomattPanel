@@ -1,0 +1,42 @@
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/login_back.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-filter: blur(2.5px);
+}
+
+.full-height{
+    background-image: url("../img/1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top: 15%;
+    left: 15%;
+    height: 70%;
+}
+.row{
+    text-align: center;
+}
+h2{
+    margin-top: 15%;
+    font-size: 4em;
+    font-family:IranNastaliq,'IranNastaliq',tahoma;
+}
+.forgot_pass{
+    margin-top: 2em;
+    opacity: 0.8;
+}
+.forgot_pass:hover{
+    opacity: 1;
+}
+.signup{
+    opacity: 0.8;
+}
+.signup:hover{
+    opacity: 1;
+}

@@ -1,0 +1,617 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="description" content="Responsive Admin Template">
+        <meta name="author" content="RedstarHospital">
+        <title>Redstar Hospital | Bootstrap Responsive Hospital Admin Template</title>
+        <!-- google font -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
+        <!-- icons -->
+        <link href="{% static 'css/temp/simple-line-icons.min.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--bootstrap -->
+        <link href="{% static 'css/temp/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <!-- Material Design Lite CSS -->
+        <link rel="stylesheet" href="{% static 'material.min.css' %}">
+        <link rel="stylesheet" href="{% static 'material_style.css' %}">
+        <!-- Theme Styles -->
+        <link href="{% static 'css/temp/theme_style.css' %}" rel="stylesheet" id="rt_style_components" type="text/css">
+        <link href="{% static 'css/temp/plugins.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/style.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/responsive.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/theme-color.css' %}" rel="stylesheet" type="text/css">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+    </head>
+    <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    	<div class="page-wrapper">
+    		<!-- start header -->
+    		<div class="page-header navbar navbar-fixed-top">
+    			<div class="page-header-inner ">
+    				<!-- logo start -->
+    				<div class="page-logo">
+    					<a href="index">
+    						<span class="fas fa-stethoscope logo-icon" style="transform: rotate(-45deg);"></span>
+    						<span class="logo-default">Sensomatt</span> </a>
+    				</div>
+    				<!-- logo end -->
+    				<ul class="nav navbar-nav navbar-left in">
+    					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="fas fa-bars"></i></a></li>
+    				</ul>
+    				<form class="search-form-opened" action="#" method="GET">
+    					<div class="input-group">
+    						<input type="text" class="form-control" placeholder="Search..." name="query">
+    						<span class="input-group-btn">
+    							<a href="javascript:;" class="btn submit">
+    								<i class="fas fa-search"></i>
+    							</a>
+    						</span>
+    					</div>
+    				</form>
+    				<!-- start mobile menu -->
+    				<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    					<span></span>
+    				</a>
+    				<!-- end mobile menu -->
+    				<!-- start header menu -->
+    				<div class="top-menu">
+    					<ul class="nav navbar-nav float-right">
+    						<!-- start notification dropdown -->
+    						<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<i class="fas fa-bell"></i>
+    								<span class="badge headerBadgeColor1"> 6 </span>
+    							</a>
+    							<ul class="dropdown-menu">
+    								<li class="external">
+    									<h3><span class="bold">Notifications</span></h3>
+    									<span class="notification-label purple-bgcolor">New 6</span>
+    								</li>
+    								<li>
+    									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;"><ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283" style="overflow: hidden; width: auto;">
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">just now</span>
+    												<span class="details">
+    													<span class="notification-icon circle deepPink-bgcolor"><i class="fas fa-check"></i></span>
+    													Congratulations!. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">3 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle purple-bgcolor"><i class="fas fa-user o"></i></span>
+    													<b>John Micle </b>is now following you. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">7 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle blue-bgcolor"><i class="fas fa-comments"></i></span>
+    													<b>Sneha Jogi </b>sent you a message. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">12 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle pink"><i class="fas fa-heart"></i></span>
+    													<b>Ravi Patel </b>like your photo. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">15 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle yellow"><i class="fas fa-exclamation-circle"></i></span> Warning! </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">10 hrs</span>
+    												<span class="details">
+    													<span class="notification-icon circle red"><i class="fas fa-times"></i></span> Application error. </span>
+    											</a>
+    										</li>
+    									</ul><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    									<div class="dropdown-menu-footer">
+    										<a href="javascript:void(0)"> All notifications </a>
+    									</div>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end notification dropdown -->
+    						<!-- start message dropdown -->
+    						<li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<i class="fas fa-envelope"></i>
+    								<span class="badge headerBadgeColor2"> 2 </span>
+    							</a>
+    							<ul class="dropdown-menu">
+    								<li class="external">
+    									<h3><span class="bold">Messages</span></h3>
+    									<span class="notification-label cyan-bgcolor">New 2</span>
+    								</li>
+    								<li>
+    									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;"><ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283" style="overflow: hidden; width: auto;">
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc2.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Sarah Smith </span>
+    													<span class="time">Just Now </span>
+    												</span>
+    												<span class="message"> Jatin I found you on LinkedIn... </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc3.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> John Deo </span>
+    													<span class="time">16 mins </span>
+    												</span>
+    												<span class="message"> Fwd: Important Notice Regarding Your Domain
+    													Name... </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc1.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Rajesh </span>
+    													<span class="time">2 hrs </span>
+    												</span>
+    												<span class="message"> pls take a print of attachments. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc8.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Lina Smith </span>
+    													<span class="time">40 mins </span>
+    												</span>
+    												<span class="message"> Apply for Ortho Surgeon </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc5.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Jacob Ryan </span>
+    													<span class="time">46 mins </span>
+    												</span>
+    												<span class="message"> Request for leave application. </span>
+    											</a>
+    										</li>
+    									</ul><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    									<div class="dropdown-menu-footer">
+    										<a href="#"> All Messages </a>
+    									</div>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end message dropdown -->
+    						<!-- start manage user dropdown -->
+    						<li class="dropdown dropdown-user">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<img alt="" class="img-circle " src="img/dp.jpg">
+    								<span class="username username-hide-on-mobile"> Dr.Test </span>
+    								<i class="fas fa-angle-down"></i>
+    							</a>
+    							<ul class="dropdown-menu dropdown-menu-default">
+    								<li>
+    									<a href="user_profile">
+    										<i class="fas fa-user"></i> Profile </a>
+    								</li>
+    								<li>
+    									<a href="#">
+    										<i class="fas fa-cogs"></i> Settings
+    									</a>
+    								</li>
+    								<li>
+    									<a href="#">
+    										<i class="fas fa-directions"></i> Help
+    									</a>
+    								</li>
+    								<li class="divider"> </li>
+    								<li>
+    									<a href="lock_screen">
+    										<i class="fas fa-lock"></i> Lock
+    									</a>
+    								</li>
+    								<li>
+    									<a href="login">
+    										<i class="fas fa-sign-out-alt"></i> Log Out </a>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end manage user dropdown -->
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- end header -->
+    		<!-- start page container -->
+    		<div class="page-container">
+    			<!-- start sidebar menu -->
+                <div class="sidebar-container">
+    				<div class="sidemenu-container navbar-collapse collapse fixed-menu">
+    					<div id="remove-scroll" class="left-sidemenu">
+                            <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false"
+    							data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+    							<li class="sidebar-toggler-wrapper hide">
+    								<div class="sidebar-toggler">
+    									<span></span>
+    								</div>
+    							</li>
+    							<li class="sidebar-user-panel">
+    								<div class="user-panel">
+    									<div class="image float-left">
+    										<img src="{% static 'img/logo.png' %}" class="img-circle user-img-circle" alt="User Image" />
+    									</div>
+    									<div class="info float-right">
+    										<p> Dr.Test</p>
+    										<a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline">
+    												Online</span></a>
+    									</div>
+    								</div>
+    							</li>
+    							<li class="nav-item ">
+    								<a href="/panel/temp/index" class="nav-link nav-toggle">
+    									<i class="material-icons">dashboard</i>
+    									<span class="title">Dashboard</span>
+
+    								</a>
+    							</li>
+    							<li class="nav-item">
+    								<a href="" class="nav-link nav-toggle">
+    									<i class="material-icons">email</i>
+    									<span class="title">Email</span>
+    									<span class="fas fa-arrow-down float-right"></span>
+    									<span class="label label-rouded label-menu deepPink-bgcolor">3</span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_inbox" class="nav-link ">
+    											<span class="title">Inbox</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_view" class="nav-link ">
+    											<span class="title">View Mail</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_compose" class="nav-link ">
+    											<span class="title">Compose Mail</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item ">
+    								<a href="" class="nav-link nav-toggle"> <i class="material-icons">person</i>
+    									<span class="title">Nurses</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item">
+    										<a href="/panel/temp/all_nurses" class="nav-link "> <span class="title">All
+    												Nurses</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_nurse" class="nav-link "> <span class="title">Add
+    												Nurses</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_nurse" class="nav-link "> <span class="title">Edit
+    												Nurses</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/nurse_profile" class="nav-link "> <span class="title">About
+    												Nurses</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item open active ">
+    								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">accessible</i>
+    									<span class="title">Patients</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item open ">
+    										<a href="/panel/temp/all_patients" class="nav-link "> <span class="title">All
+    												Patients</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_patient" class="nav-link "> <span class="title">Add
+    												Patient</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_patient" class="nav-link "> <span class="title">Edit
+    												Patient</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/patient_profile" class="nav-link "> <span class="title">Patient
+    												Profile</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item  ">
+    								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">hotel</i>
+    									<span class="title">Bed Allotment</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/bed_allotment" class="nav-link "> <span class="title">Alloted
+    												beds</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_bed_allotment" class="nav-link "> <span class="title">New
+    												Allotment</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_bed_allotment" class="nav-link "> <span class="title">Edit
+    												Allotment</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    			<!-- end sidebar menu -->
+    			<!-- start page content -->
+                <div class="page-content-wrapper">
+    				<div class="page-content">
+    					<div class="page-bar">
+    						<div class="page-title-breadcrumb">
+    							<div class=" float-left">
+    								<div class="page-title">Patient List</div>
+    							</div>
+    							<ol class="breadcrumb page-breadcrumb float-right">
+    								<li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
+    										href="index">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+    								</li>
+    								<li><a class="parent-item" href="">Patients</a>&nbsp;<i class="fa fa-angle-right"></i>
+    								</li>
+    								<li class="active">Patient List</li>
+    							</ol>
+    						</div>
+    					</div>
+    					<div class="row">
+    						<div class="col-md-12">
+    							<div class="tabbable-line">
+    								<!-- <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a href="#tab1" data-toggle="tab"> List View </a>
+                                        </li>
+                                        <li>
+                                            <a href="#tab2" data-toggle="tab"> Grid View </a>
+                                        </li>
+                                    </ul> -->
+    								<ul class="nav customtab nav-tabs" role="tablist">
+    									<li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">List
+    											View</a></li>
+    									<li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">Grid
+    											View</a></li>
+    								</ul>
+    								<div class="tab-content">
+    									<div class="tab-pane active fontawesome-demo" id="tab1">
+    										<div class="row">
+    											<div class="col-md-12">
+    												<div class="card card-topline-red">
+    													<div class="card-head">
+    														<header></header>
+    														<div class="tools">
+    															<a class="fas fa-redo-alt btn-color box-refresh"
+    																href="javascript:;"></a>
+    															<a class="t-collapse btn-color fa fa-chevron-down"
+    																href="javascript:;"></a>
+    															<a class="t-close btn-color fa fa-times"
+    																href="javascript:;"></a>
+    														</div>
+    													</div>
+    													<div class="card-body ">
+    														<div class="row">
+    															<div class="col-md-6 col-sm-6 col-xs-6">
+    																<div class="btn-group">
+    																	<a href="add_patient" id="addRow"
+    																		class="btn btn-info">
+    																		Add New <i class="fa fa-plus"></i>
+    																	</a>
+    																</div>
+    															</div>
+    															<div class="col-md-6 col-sm-6 col-xs-6">
+    																<div class="btn-group float-right">
+    																	<a class="btn deepPink-bgcolor  btn-outline dropdown-toggle"
+    																		data-toggle="dropdown">Tools
+    																		<i class="fa fa-angle-down"></i>
+    																	</a>
+    																	<ul class="dropdown-menu float-right">
+    																		<li>
+    																			<a href="javascript:;">
+    																				<i class="fa fa-print"></i> Print </a>
+    																		</li>
+    																		<li>
+    																			<a href="javascript:;">
+    																				<i class="fa fa-file-pdf"></i> Save as
+    																				PDF </a>
+    																		</li>
+    																		<li>
+    																			<a href="javascript:;">
+    																				<i class="fa fa-file-excel"></i>
+    																				Export to Excel </a>
+    																		</li>
+    																	</ul>
+    																</div>
+    															</div>
+    														</div>
+                                                            <div class="row">
+                                                                <div class="col-sm-12 col-md-12">
+                                                                    <div id="example4_filter" class="dataTables_filter">
+                                                                        <form action="" method="post">{% csrf_token %}
+                                                                            <label>Search:<input type="search" name="data" class="form-control form-control-sm" placeholder="" aria-controls="example4"></label>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+    														<div class="table-scrollable">
+    															<table
+    																class="table table-hover table-checkable order-column full-width"
+    																id="example4">
+                                                                    <thead>
+    																	<tr>
+    																		<th></th>
+    																		<th> Name </th>
+    																		<th> Sex </th>
+    																		<th> Address </th>
+    																		<th> Mobile </th>
+    																		<th> Birth Date </th>
+    																		<th> Age </th>
+    																		<th> Blood Group </th>
+    																		<th> Status </th>
+    																		<th> Action </th>
+    																	</tr>
+    																</thead>
+    																<tbody>
+                                                                        {% for i in patients %}
+                                                                        <tr class="odd gradeX">
+                                                                            <td class="patient-img">
+                                                                                <img src="{% static 'img/logo.png' %}" alt="">
+                                                                            </td>
+                                                                            <td>{{ i.1 }}</td>
+                                                                            <td class="center">
+                                                                                {% if i.4 == 'F' %}
+                                                                                  Female
+                                                                                {% elif i.4 == 'M' %}
+                                                                                  Male
+                                                                                {% endif %}
+                                                                            </td>
+                                                                            <td class="center">18,Ajay flats, satadhar,
+                                                                                ahmedabad</td>
+                                                                            <td><a href="tel:{{ i.2 }}">
+                                                                                    {{ i.2 }} </a></td>
+                                                                            <td class="center">11 Jan 1983</td>
+                                                                            <td class="center">{{ i.3 }}</td>
+                                                                            <td class="center">AB++</td>
+                                                                            <td class="center">{{ i.5 }}</td>
+                                                                            <td>
+                                                                                <a href="edit_patinet"
+                                                                                    class="btn btn-primary btn-xs">
+                                                                                    <i class="fa fa-pencil-alt"></i>
+                                                                                </a>
+                                                                                <br />
+                                                                                <button class="btn btn-danger btn-xs">
+                                                                                    <i class="fa fa-trash "></i>
+                                                                                </button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        {% endfor %}
+    																</tbody>
+    															</table>
+    														</div>
+    													</div>
+    												</div>
+    											</div>
+    										</div>
+    									</div>
+    									<div class="tab-pane" id="tab2">
+    										<div class="row">
+                                                {% for i in patients %}
+                                                <div class="col-md-4">
+    												<div class="card card-topline-aqua">
+    													<div class="card-body no-padding ">
+    														<div class="doctor-profile">
+                                                                <img src="{% static 'img/logo.png' %}" class="doctor-pic" alt="">
+    															<div class="profile-usertitle">
+    																<div class="doctor-name"> {{ i.1 }} </div>
+    															</div>
+    															<p>A-103, shyam gokul flats, Mahatma Road <br />Mumbai</p>
+    															<div>
+    																<p><i class="fa fa-phone"></i><a
+    																		href="tel:{{ i.2 }}"> {{ i.2 }}</a></p>
+    															</div>
+    															<div class="profile-userbuttons">
+    																<a href="patient_profile"
+    																	class="btn btn-circle deepPink-bgcolor btn-sm">Read
+    																	More</a>
+    															</div>
+    														</div>
+    													</div>
+    												</div>
+    											</div>
+                                                {% endfor %}
+    										</div>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<!-- end page content -->
+    		</div>
+    		<!-- end page container -->
+    		<!-- start footer -->
+    		<div class="page-footer">
+    			<div class="page-footer-inner"> 2017 © RedStar Hospital Theme By
+    				<a href="mailto:redstartheme@gmail.com" target="_top" class="makerCss">RT Theme maker</a>
+    			</div>
+    			<div class="scroll-to-top">
+    				<i class="fas fa-arrow-up"></i>
+    			</div>
+    		</div>
+    		<!-- end footer -->
+    	</div>
+    	<!-- start js include path -->
+    	<script src="{% static 'js/temp/jquery.min.js' %}"></script>
+    	<script src="{% static 'js/temp/popper.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.blockui.min.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.slimscroll.js' %}"></script>
+    	<!-- bootstrap -->
+    	<script src="{% static 'js/temp/bootstrap.min.js' %}"></script>
+    	<script src="{% static 'js/temp/bootstrap-switch.min.js' %}"></script>
+    	<!-- counterup -->
+    	<script src="{% static 'js/temp/jquery.waypoints.min.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.counterup.min.js' %}"></script>
+    	<!-- Common js-->
+    	<script src="{% static 'js/temp/app.js' %}"></script>
+    	<script src="{% static 'js/temp/layout.js' %}"></script>
+    	<script src="{% static 'js/temp/theme-color.js' %}"></script>
+    	<!-- material -->
+    	<script src="{% static 'js/temp/material.min.js' %}"></script>
+    	<!-- chart js -->
+    	<script src="{% static 'js/temp/Chart.bundle.js' %}"></script>
+    	<script src="{% static 'js/temp/utils.js' %}"></script>
+    	<script src="{% static 'js/temp/home1-chartjs-data.js' %}"></script>
+        <script src="{% static 'css/fontawesome/js/all.js' %}"></script>
+    	<!-- end js include path -->
+
+    </body>
+</html>

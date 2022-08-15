@@ -1,0 +1,1071 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta name="description" content="Responsive Admin Template">
+        <meta name="author" content="RedstarHospital">
+        <title>Redstar Hospital | Bootstrap Responsive Hospital Admin Template</title>
+        <!-- google font -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=all" rel="stylesheet" type="text/css">
+        <!-- icons -->
+        <link href="{% static 'css/temp/simple-line-icons.min.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/fontawesome/css/all.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!--bootstrap -->
+        <link href="{% static 'css/temp/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+        <!-- Material Design Lite CSS -->
+        <link rel="stylesheet" href="{% static 'material.min.css' %}">
+        <link rel="stylesheet" href="{% static 'material_style.css' %}">
+        <!-- Theme Styles -->
+        <link href="{% static 'css/temp/theme_style.css' %}" rel="stylesheet" id="rt_style_components" type="text/css">
+        <link href="{% static 'css/temp/plugins.min.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/style.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/responsive.css' %}" rel="stylesheet" type="text/css">
+        <link href="{% static 'css/temp/theme-color.css' %}" rel="stylesheet" type="text/css">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="img/favicon.ico">
+    </head>
+    <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white white-sidebar-color logo-indigo">
+    	<div class="page-wrapper">
+    		<!-- start header -->
+    		<div class="page-header navbar navbar-fixed-top">
+    			<div class="page-header-inner ">
+    				<!-- logo start -->
+    				<div class="page-logo">
+    					<a href="index">
+    						<span class="fas fa-stethoscope logo-icon" style="transform: rotate(-45deg);"></span>
+    						<span class="logo-default">Sensomatt</span> </a>
+    				</div>
+    				<!-- logo end -->
+    				<ul class="nav navbar-nav navbar-left in">
+    					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="fas fa-bars"></i></a></li>
+    				</ul>
+    				<form class="search-form-opened" action="#" method="GET">
+    					<div class="input-group">
+    						<input type="text" class="form-control" placeholder="Search..." name="query">
+    						<span class="input-group-btn">
+    							<a href="javascript:;" class="btn submit">
+    								<i class="fas fa-search"></i>
+    							</a>
+    						</span>
+    					</div>
+    				</form>
+    				<!-- start mobile menu -->
+    				<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+    					<span></span>
+    				</a>
+    				<!-- end mobile menu -->
+    				<!-- start header menu -->
+    				<div class="top-menu">
+    					<ul class="nav navbar-nav float-right">
+    						<!-- start notification dropdown -->
+    						<li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<i class="fas fa-bell"></i>
+    								<span class="badge headerBadgeColor1"> 6 </span>
+    							</a>
+    							<ul class="dropdown-menu">
+    								<li class="external">
+    									<h3><span class="bold">Notifications</span></h3>
+    									<span class="notification-label purple-bgcolor">New 6</span>
+    								</li>
+    								<li>
+    									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;"><ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283" style="overflow: hidden; width: auto;">
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">just now</span>
+    												<span class="details">
+    													<span class="notification-icon circle deepPink-bgcolor"><i class="fas fa-check"></i></span>
+    													Congratulations!. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">3 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle purple-bgcolor"><i class="fas fa-user o"></i></span>
+    													<b>John Micle </b>is now following you. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">7 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle blue-bgcolor"><i class="fas fa-comments"></i></span>
+    													<b>Sneha Jogi </b>sent you a message. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">12 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle pink"><i class="fas fa-heart"></i></span>
+    													<b>Ravi Patel </b>like your photo. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">15 mins</span>
+    												<span class="details">
+    													<span class="notification-icon circle yellow"><i class="fas fa-exclamation-circle"></i></span> Warning! </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="javascript:;">
+    												<span class="time">10 hrs</span>
+    												<span class="details">
+    													<span class="notification-icon circle red"><i class="fas fa-times"></i></span> Application error. </span>
+    											</a>
+    										</li>
+    									</ul><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    									<div class="dropdown-menu-footer">
+    										<a href="javascript:void(0)"> All notifications </a>
+    									</div>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end notification dropdown -->
+    						<!-- start message dropdown -->
+    						<li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<i class="fas fa-envelope"></i>
+    								<span class="badge headerBadgeColor2"> 2 </span>
+    							</a>
+    							<ul class="dropdown-menu">
+    								<li class="external">
+    									<h3><span class="bold">Messages</span></h3>
+    									<span class="notification-label cyan-bgcolor">New 2</span>
+    								</li>
+    								<li>
+    									<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;"><ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283" style="overflow: hidden; width: auto;">
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc2.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Sarah Smith </span>
+    													<span class="time">Just Now </span>
+    												</span>
+    												<span class="message"> Jatin I found you on LinkedIn... </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc3.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> John Deo </span>
+    													<span class="time">16 mins </span>
+    												</span>
+    												<span class="message"> Fwd: Important Notice Regarding Your Domain
+    													Name... </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc1.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Rajesh </span>
+    													<span class="time">2 hrs </span>
+    												</span>
+    												<span class="message"> pls take a print of attachments. </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc8.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Lina Smith </span>
+    													<span class="time">40 mins </span>
+    												</span>
+    												<span class="message"> Apply for Ortho Surgeon </span>
+    											</a>
+    										</li>
+    										<li>
+    											<a href="#">
+    												<span class="photo">
+    													<img src="img/doc/doc5.jpg" class="img-circle" alt=""> </span>
+    												<span class="subject">
+    													<span class="from"> Jacob Ryan </span>
+    													<span class="time">46 mins </span>
+    												</span>
+    												<span class="message"> Request for leave application. </span>
+    											</a>
+    										</li>
+    									</ul><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;"></div><div class="slimScrollRail" style="width: 5px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+    									<div class="dropdown-menu-footer">
+    										<a href="#"> All Messages </a>
+    									</div>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end message dropdown -->
+    						<!-- start manage user dropdown -->
+    						<li class="dropdown dropdown-user">
+    							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+    								<img alt="" class="img-circle " src="img/dp.jpg">
+    								<span class="username username-hide-on-mobile"> Dr.Test </span>
+    								<i class="fas fa-angle-down"></i>
+    							</a>
+    							<ul class="dropdown-menu dropdown-menu-default">
+    								<li>
+    									<a href="user_profile">
+    										<i class="fas fa-user"></i> Profile </a>
+    								</li>
+    								<li>
+    									<a href="#">
+    										<i class="fas fa-cogs"></i> Settings
+    									</a>
+    								</li>
+    								<li>
+    									<a href="#">
+    										<i class="fas fa-directions"></i> Help
+    									</a>
+    								</li>
+    								<li class="divider"> </li>
+    								<li>
+    									<a href="lock_screen">
+    										<i class="fas fa-lock"></i> Lock
+    									</a>
+    								</li>
+    								<li>
+    									<a href="login">
+    										<i class="fas fa-sign-out-alt"></i> Log Out </a>
+    								</li>
+    							</ul>
+    						</li>
+    						<!-- end manage user dropdown -->
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- end header -->
+    		<!-- start page container -->
+    		<div class="page-container">
+    			<!-- start sidebar menu -->
+                <div class="sidebar-container">
+    				<div class="sidemenu-container navbar-collapse collapse fixed-menu">
+    					<div id="remove-scroll" class="left-sidemenu">
+    						<ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false"
+    							data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+    							<li class="sidebar-toggler-wrapper hide">
+    								<div class="sidebar-toggler">
+    									<span></span>
+    								</div>
+    							</li>
+    							<li class="sidebar-user-panel">
+    								<div class="user-panel">
+    									<div class="image float-left">
+    										<img src="{% static 'img/logo.png' %}" class="img-circle user-img-circle" alt="User Image" />
+    									</div>
+    									<div class="info float-right">
+    										<p> Dr.Test</p>
+    										<a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline">
+    												Online</span></a>
+    									</div>
+    								</div>
+    							</li>
+    							<li class="nav-item open active ">
+    								<a href="/panel/temp/index" class="nav-link nav-toggle">
+    									<i class="material-icons">dashboard</i>
+    									<span class="title">Dashboard</span>
+
+    								</a>
+    							</li>
+    							<li class="nav-item">
+    								<a href="" class="nav-link nav-toggle">
+    									<i class="material-icons">email</i>
+    									<span class="title">Email</span>
+    									<span class="fas fa-arrow-down float-right"></span>
+    									<span class="label label-rouded label-menu deepPink-bgcolor">3</span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_inbox" class="nav-link ">
+    											<span class="title">Inbox</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_view" class="nav-link ">
+    											<span class="title">View Mail</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/email_compose" class="nav-link ">
+    											<span class="title">Compose Mail</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item  ">
+    								<a href="" class="nav-link nav-toggle"> <i class="material-icons">person</i>
+    									<span class="title">Nurses</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/all_nurses" class="nav-link "> <span class="title">All
+    												Nurse</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_nurse" class="nav-link "> <span class="title">Add
+    												Nurse</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_nurse" class="nav-link "> <span class="title">Edit
+    												Nurse</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/nurse_profile" class="nav-link "> <span class="title">About
+    												Nurse</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item  ">
+    								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">accessible</i>
+    									<span class="title">Patients</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/all_patients" class="nav-link "> <span class="title">All
+    												Patients</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_patient" class="nav-link "> <span class="title">Add
+    												Patient</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_patient" class="nav-link "> <span class="title">Edit
+    												Patient</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/patient_profile" class="nav-link "> <span class="title">Patient
+    												Profile</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    							<li class="nav-item  ">
+    								<a href="#" class="nav-link nav-toggle"> <i class="material-icons">hotel</i>
+    									<span class="title">Bed Allotment</span>
+                                        <span class="fas fa-arrow-down float-right"></span>
+    								</a>
+    								<ul class="sub-menu">
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/bed_allotment" class="nav-link "> <span class="title">Alloted
+    												beds</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/add_bed_allotment" class="nav-link "> <span class="title">New
+    												Allotment</span>
+    										</a>
+    									</li>
+    									<li class="nav-item  ">
+    										<a href="/panel/temp/edit_bed_allotment" class="nav-link "> <span class="title">Edit
+    												Allotment</span>
+    										</a>
+    									</li>
+    								</ul>
+    							</li>
+    						</ul>
+    					</div>
+    				</div>
+    			</div>
+    			<!-- end sidebar menu -->
+    			<!-- start page content -->
+    			<div class="page-content-wrapper">
+    				<div class="page-content">
+                        <div class="page-bar">
+    						<div class="page-title-breadcrumb">
+    							<div class=" float-left">
+    								<div class="page-title">Dashboard</div>
+    							</div>
+    							<ol class="breadcrumb page-breadcrumb float-right">
+    								<li><i class="fa fa-home" style="opacity: 0.30"></i>&nbsp;<a class="parent-item"
+    										href="index">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+    								</li>
+    								<li class="active">Dashboard</li>
+    							</ol>
+    						</div>
+    					</div>
+    					<!-- start widget -->
+    					<div class="state-overview">
+    						<div class="row">
+    							<div class="col-xl-3 col-md-6 col-12">
+    								<div class="info-box bg-blue">
+    									<span class="info-box-icon push-bottom"><i class="material-icons">group</i></span>
+    									<div class="info-box-content">
+    										<span class="info-box-text">Appointments</span>
+    										<span class="info-box-number">450</span>
+    										<div class="progress">
+    											<div class="progress-bar" style="width: 45%"></div>
+    										</div>
+    										<span class="progress-description">
+    											45% Increase in 28 Days
+    										</span>
+    									</div>
+    									<!-- /.info-box-content -->
+    								</div>
+    								<!-- /.info-box -->
+    							</div>
+    							<!-- /.col -->
+    							<div class="col-xl-3 col-md-6 col-12">
+    								<div class="info-box bg-orange">
+    									<span class="info-box-icon push-bottom"><i class="material-icons">person</i></span>
+    									<div class="info-box-content">
+    										<span class="info-box-text">New Patients</span>
+    										<span class="info-box-number">155</span>
+    										<div class="progress">
+    											<div class="progress-bar" style="width: 40%"></div>
+    										</div>
+    										<span class="progress-description">
+    											40% Increase in 28 Days
+    										</span>
+    									</div>
+    									<!-- /.info-box-content -->
+    								</div>
+    								<!-- /.info-box -->
+    							</div>
+    							<!-- /.col -->
+    							<div class="col-xl-3 col-md-6 col-12">
+    								<div class="info-box bg-purple">
+    									<span class="info-box-icon push-bottom"><i class="material-icons">content_cut</i></span>
+    									<div class="info-box-content">
+    										<span class="info-box-text">Operations</span>
+    										<span class="info-box-number">52</span>
+    										<div class="progress">
+    											<div class="progress-bar" style="width: 85%"></div>
+    										</div>
+    										<span class="progress-description">
+    											85% Increase in 28 Days
+    										</span>
+    									</div>
+    									<!-- /.info-box-content -->
+    								</div>
+    								<!-- /.info-box -->
+    							</div>
+    							<!-- /.col -->
+    							<div class="col-xl-3 col-md-6 col-12">
+    								<div class="info-box bg-success">
+    									<span class="info-box-icon push-bottom"><i class="material-icons">monetization_on</i></span>
+    									<div class="info-box-content">
+    										<span class="info-box-text">Hospital Earning</span>
+    										<span class="info-box-number">13,921</span><span>$</span>
+    										<div class="progress">
+    											<div class="progress-bar" style="width: 50%"></div>
+    										</div>
+    										<span class="progress-description">
+    											50% Increase in 28 Days
+    										</span>
+    									</div>
+    									<!-- /.info-box-content -->
+    								</div>
+    								<!-- /.info-box -->
+    							</div>
+    							<!-- /.col -->
+    						</div>
+    					</div>
+    					<!-- end widget -->
+    					<!-- chart start -->
+    					<div class="row">
+    						<div class="col-md-8">
+    							<div class="card card-box">
+    								<div class="card-head">
+    									<header>HOSPITAL SURVEY</header>
+    									<div class="tools">
+    										<a class="fas fa-redo-alt btn-color box-refresh" href="javascript:;"></a>
+    										<a class="t-collapse btn-color fas fa-chevron-down" href="javascript:;"></a>
+    										<a class="t-close btn-color fas fa-times" href="javascript:;"></a>
+    									</div>
+    								</div>
+    								<div class="card-body no-padding height-9">
+    									<div class="row"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+    										<canvas id="chartjs_line" width="487" height="243" style="display: block; width: 487px; height: 243px;"></canvas>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-md-4">
+    							<div class="card card-box">
+    								<div class="card-head">
+    									<header>HOSPITAL SURVEY</header>
+    									<div class="tools">
+    										<a class="fas fa-redo-alt btn-color box-refresh" href="javascript:;"></a>
+    										<a class="t-collapse btn-color fas fa-chevron-down" href="javascript:;"></a>
+    										<a class="t-close btn-color fas fa-times" href="javascript:;"></a>
+    									</div>
+    								</div>
+    								<div class="card-body no-padding height-9">
+    									<div class="row"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+    										<canvas id="chartjs_doughnut" width="219" height="219" style="display: block; width: 219px; height: 219px;"></canvas>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<!-- Chart end -->
+    					<div class="row">
+    						<div class="col-md-8 col-sm-12">
+    							<div class="card  card-box">
+    								<div class="card-head">
+    									<header>BOOKED APPOINTMENT</header>
+    									<div class="tools">
+    										<a class="fas fa-redo-alt btn-color box-refresh" href="javascript:;"></a>
+    										<a class="t-collapse btn-color fas fa-chevron-down" href="javascript:;"></a>
+    										<a class="t-close btn-color fas fa-times" href="javascript:;"></a>
+    									</div>
+    								</div>
+    								<div class="card-body ">
+    									<div class="row table-padding">
+    										<div class="col-md-6 col-sm-6 col-xs-6">
+    											<div class="btn-group">
+    												<a href="book_appointment" id="addRow" class="btn btn-info">
+    													Add New <i class="fas fa-plus"></i>
+    												</a>
+    											</div>
+    										</div>
+    										<div class="col-md-6 col-sm-6 col-xs-6">
+    											<div class="btn-group float-right">
+    												<button class="btn deepPink-bgcolor  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
+    													<i class="fas fa-angle-down"></i>
+    												</button>
+    												<ul class="dropdown-menu float-right">
+    													<li>
+    														<a href="javascript:;">
+    															<i class="fas fa-print"></i> Print </a>
+    													</li>
+    													<li>
+    														<a href="javascript:;">
+    															<i class="fas fa-file-pdf-o"></i> Save as PDF </a>
+    													</li>
+    													<li>
+    														<a href="javascript:;">
+    															<i class="fas fa-file-excel-o"></i> Export to Excel </a>
+    													</li>
+    												</ul>
+    											</div>
+    										</div>
+    									</div>
+    									<div class="table-responsive">
+    										<table class="table table-striped table-bordered table-hover table-checkable order-column" id="example4">
+    											<thead>
+    												<tr>
+    													<th>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes">
+    															<span></span>
+    														</label>
+    													</th>
+    													<th>Patient Name</th>
+    													<th>Assigned nurse</th>
+    													<th>Date</th>
+    													<th>Time</th>
+    													<th>Actions </th>
+    												</tr>
+    											</thead>
+    											<tbody>
+    												<tr class="odd gradeX">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Jayesh Patel </td>
+    													<td>
+    														<a href="mailto:shuxer@gmail.com"> Dr.Rajesh </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 10:45 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-warning dropdown-toggle center no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu float-left" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    												<tr class="odd gradeX">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Pooja Patel </td>
+    													<td>
+    														<a href="mailto:looper90@gmail.com"> Dr.Sarah Smith </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 10:55 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-info dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    												<tr class="odd gradeX">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Pankaj Singh </td>
+    													<td>
+    														<a href="mailto:userwow@yahoo.com"> Dr.Rajesh </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 11:15 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-success dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    												<tr class="odd gradeX">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Raj Malhotra </td>
+    													<td>
+    														<a href="mailto:nursemail@gmail.com"> Dr.Megha Trivedi </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 11:25 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-primary dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    												<tr class="odd gradeX">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Sneha Pandya </td>
+    													<td>
+    														<a href="mailto:nursemail@gmail.com"> Dr.Sarah Smith </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 11:35 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-warning dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    												<tr class="odd gradeX ">
+    													<td>
+    														<label class="rt-chkbox rt-chkbox-single rt-chkbox-outline">
+    															<input type="checkbox" class="checkboxes" value="1">
+    															<span></span>
+    														</label>
+    													</td>
+    													<td> Sameer Jain </td>
+    													<td>
+    														<a href="mailto:nursemail@gmail.com"> Dr.Megha Trivedi </a>
+    													</td>
+    													<td class="center"> 12/05/2016 </td>
+    													<td class="center"> 11:45 </td>
+    													<td class="center">
+    														<div class="btn-group">
+    															<button class="btn btn-xs btn-danger dropdown-toggle no-margin" type="button" data-toggle="dropdown" aria-expanded="false"> Actions
+    																<i class="fas fa-angle-down"></i>
+    															</button>
+    															<ul class="dropdown-menu" role="menu">
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-trash-o"></i>
+    																		Delete </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-ban"></i>
+    																		Cancel </a>
+    																</li>
+    																<li>
+    																	<a href="javascript:;"><i class="fas fa-clock-o"></i>
+    																		Postpone </a>
+    																</li>
+    															</ul>
+    														</div>
+    													</td>
+    												</tr>
+    											</tbody>
+    										</table>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    						<div class="col-md-4 col-sm-12">
+    							<div class="card  card-box">
+    								<div class="card-head">
+    									<header>nurseS LIST</header>
+    									<div class="tools">
+    										<a class="fas fa-redo-alt btn-color box-refresh" href="javascript:;"></a>
+    										<a class="t-collapse btn-color fas fa-chevron-down" href="javascript:;"></a>
+    										<a class="t-close btn-color fas fa-times" href="javascript:;"></a>
+    									</div>
+    								</div>
+    								<div class="card-body no-padding height-9">
+    									<div class="row">
+    										<ul class="docListWindow">
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc1.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.Rajesh</a> -(MBBS,MD)
+    													</div>
+    													<div>
+    														<span class="clsAvailable">Available</span>
+    													</div>
+    												</div>
+    											</li>
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc2.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.Sarah Smith</a> -(MBBS,MD)
+    													</div>
+    													<div>
+    														<span class="clsAvailable">Available</span>
+    													</div>
+    												</div>
+    											</li>
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc3.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.John Deo</a> - (BDS,MDS)
+    													</div>
+    													<div>
+    														<span class="clsNotAvailable">Not Available</span>
+    													</div>
+    												</div>
+    											</li>
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc4.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.Jay Soni</a> - (BHMS)
+    													</div>
+    													<div>
+    														<span class="clsOnLeave">On Leave</span>
+    													</div>
+    												</div>
+    											</li>
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc5.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.Jacob Ryan</a> - (MBBS,MS)
+    													</div>
+    													<div>
+    														<span class="clsNotAvailable">Not Available</span>
+    													</div>
+    												</div>
+    											</li>
+    											<li>
+    												<div class="prog-avatar">
+    													<img src="img/doc/doc6.jpg" alt="" width="40" height="40">
+    												</div>
+    												<div class="details">
+    													<div class="title">
+    														<a href="#">Dr.Megha Trivedi</a> - (MBBS,MS)
+    													</div>
+    													<div>
+    														<span class="clsAvailable">Available</span>
+    													</div>
+    												</div>
+    											</li>
+    										</ul>
+    										<div class="text-center full-width">
+    											<a href="#">View all</a>
+    										</div>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<!-- start admited patient list -->
+    					<div class="row">
+    						<div class="col-md-12 col-sm-12">
+    							<div class="card  card-box">
+    								<div class="card-head">
+    									<header>ADMIT PATIENT LIST</header>
+    									<div class="tools">
+    										<a class="fas fa-redo-alt btn-color box-refresh" href="javascript:;"></a>
+    										<a class="t-collapse btn-color fas fa-chevron-down" href="javascript:;"></a>
+    										<a class="t-close btn-color fas fa-times" href="javascript:;"></a>
+    									</div>
+    								</div>
+    								<div class="card-body ">
+    									<div class="table-wrap">
+    										<div class="table-responsive">
+    											<table class="table display product-overview mb-30" id="support_table">
+    												<thead>
+    													<tr>
+    														<th>No</th>
+    														<th>Name</th>
+    														<th>Assigned nurse</th>
+    														<th>Date Of Admit</th>
+    														<th>Diseases</th>
+    														<th>bed No</th>
+    														<th>Edit</th>
+    													</tr>
+    												</thead>
+    												<tbody>
+    													<tr>
+    														<td>1</td>
+    														<td>Jens Brincker</td>
+    														<td>Dr.Kenny Josh</td>
+    														<td>27/05/2016</td>
+    														<td>
+    															<span class="label label-sm label-success">Influenza</span>
+    														</td>
+    														<td>101</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>2</td>
+    														<td>Mark Hay</td>
+    														<td>Dr. Mark</td>
+    														<td>26/05/2017</td>
+    														<td>
+    															<span class="label label-sm label-warning"> Cholera </span>
+    														</td>
+    														<td>105</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>3</td>
+    														<td>Anthony Davie</td>
+    														<td>Dr.Cinnabar</td>
+    														<td>21/05/2016</td>
+    														<td>
+    															<span class="label label-sm label-success ">Amoebiasis</span>
+    														</td>
+    														<td>106</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>4</td>
+    														<td>David Perry</td>
+    														<td>Dr.Felix </td>
+    														<td>20/04/2016</td>
+    														<td>
+    															<span class="label label-sm label-danger">Jaundice</span>
+    														</td>
+    														<td>105</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>5</td>
+    														<td>Anthony Davie</td>
+    														<td>Dr.Beryl</td>
+    														<td>24/05/2016</td>
+    														<td>
+    															<span class="label label-sm label-success ">Leptospirosis</span>
+    														</td>
+    														<td>102</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>6</td>
+    														<td>Alan Gilchrist</td>
+    														<td>Dr.Joshep</td>
+    														<td>22/05/2016</td>
+    														<td>
+    															<span class="label label-sm label-warning ">Hepatitis</span>
+    														</td>
+    														<td>103</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>7</td>
+    														<td>Mark Hay</td>
+    														<td>Dr.Jayesh</td>
+    														<td>18/06/2016</td>
+    														<td>
+    															<span class="label label-sm label-success ">Typhoid</span>
+    														</td>
+    														<td>107</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    													<tr>
+    														<td>8</td>
+    														<td>Sue Woodger</td>
+    														<td>Dr.Sharma</td>
+    														<td>17/05/2016</td>
+    														<td>
+    															<span class="label label-sm label-danger">Malaria</span>
+    														</td>
+    														<td>108</td>
+    														<td><a href="javascript:void(0)" class="" data-toggle="tooltip" title="Edit"><i class="fas fa-check"></i></a><br />
+    															<a href="javascript:void(0)" class="text-inverse" title="Delete" data-toggle="tooltip"><i class="fas fa-trash"></i></a></td>
+    													</tr>
+    												</tbody>
+    											</table>
+    										</div>
+    									</div>
+    								</div>
+    							</div>
+    						</div>
+    					</div>
+    					<!-- end admited patient list -->
+    				</div>
+    			</div>
+    			<!-- end page content -->
+    		</div>
+    		<!-- end page container -->
+    		<!-- start footer -->
+    		<div class="page-footer">
+    			<div class="page-footer-inner"> 2017 © RedStar Hospital Theme By
+    				<a href="mailto:redstartheme@gmail.com" target="_top" class="makerCss">RT Theme maker</a>
+    			</div>
+    			<div class="scroll-to-top">
+    				<i class="fas fa-arrow-up"></i>
+    			</div>
+    		</div>
+    		<!-- end footer -->
+    	</div>
+    	<!-- start js include path -->
+    	<script src="{% static 'js/temp/jquery.min.js' %}"></script>
+    	<script src="{% static 'js/temp/popper.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.blockui.min.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.slimscroll.js' %}"></script>
+    	<!-- bootstrap -->
+    	<script src="{% static 'js/temp/bootstrap.min.js' %}"></script>
+    	<script src="{% static 'js/temp/bootstrap-switch.min.js' %}"></script>
+    	<!-- counterup -->
+    	<script src="{% static 'js/temp/jquery.waypoints.min.js' %}"></script>
+    	<script src="{% static 'js/temp/jquery.counterup.min.js' %}"></script>
+    	<!-- Common js-->
+    	<script src="{% static 'js/temp/app.js' %}"></script>
+    	<script src="{% static 'js/temp/layout.js' %}"></script>
+    	<script src="{% static 'js/temp/theme-color.js' %}"></script>
+    	<!-- material -->
+    	<script src="{% static 'js/temp/material.min.js' %}"></script>
+    	<!-- chart js -->
+    	<script src="{% static 'js/temp/Chart.bundle.js' %}"></script>
+    	<script src="{% static 'js/temp/utils.js' %}"></script>
+    	<script src="{% static 'js/temp/home1-chartjs-data.js' %}"></script>
+        <script src="{% static 'css/fontawesome/js/all.js' %}"></script>
+    	<!-- end js include path -->
+
+    </body>
+</html>

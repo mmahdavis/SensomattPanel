@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+        <title>PANEL</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="logo" src="{% static 'img/logo.png' %}" alt="sensomatt logo" style='width:20%; margin: 10px'/>
+                <ul class="list-group menu">
+                  <a class="list-group-item list-group-item-action active" href="">Dashboard</a>
+                  <a class="list-group-item list-group-item-action" href="/panel/beds/show/">ICU Beds</a>
+                  <a class="list-group-item list-group-item-action" href="/panel/nurses/show/">ICU nurses</a>
+                  <a class="list-group-item list-group-item-action" href="/panel/patients/show">ICU Patient</a>
+                  <a class="list-group-item list-group-item-action" href="">SMS</a>
+                  <a class="list-group-item list-group-item-action" href="">PAGER</a>
+                </ul>
+            </div>
+            <div class="col-md-9 content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="/panel/nurses/new/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New nurses <span class="iconify" data-icon="typcn-user-add-outline"></span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/panel/beds/new/history/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed History <span class="iconify" data-icon="typcn:calendar"></span></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="/panel/beds/new" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed <span class="iconify" data-icon="typcn:beaker"></span></a>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/admin" type="button" class="btn btn-primary align-middle" role="button">Admin Site <span class="iconify" data-icon="typcn:user"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

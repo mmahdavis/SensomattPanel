@@ -1,0 +1,49 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/w3.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/leader_login.css' %}" />
+
+
+		<title>Leader Login</title>
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		<div class="bg"></div>
+		<div class="row">
+			<span class="col-md-1"></span>
+			<div class="col-md-4 full-height">
+				<div class="row">
+					<div class="col-md-12">
+					<h2>Login</h2>
+					</div>
+				</div>
+				<form method="post">
+					{% csrf_token %}
+					{{ form|crispy }}
+					<button class="save btn btn-primary" type="submit">Login</button>
+				</form>
+				<div class="row">
+					<div class="col-md-12 forgot_pass">
+						<a class="" href="">Forgot Password?</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 signup">
+						<a href="">Register</a>
+					</div>
+				</div>
+			</div>
+			<span class="col-md-7"></span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/icon.css' %}" />
+        <script src="{% static 'iconify.min.js' %}"></script>
+
+        <title>PANEL</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="logo" src="{% static 'img/logo.png' %}" alt="sensomatt logo" style='width:20%; margin: 10px'/>
+                <ul class="list-group menu">
+                  <a class="list-group-item list-group-item-action" href="/panel/">Dashboard</a>
+                  <a class="list-group-item list-group-item-action {% if value == 'beds' %} active {% endif %}" href="/panel/beds/show/">ICU Beds</a>
+                      {% if value == 'bed_history' %}
+                      <ul class="list-group-item border-top-0">
+                          <a class="list-group-item list-group-item-action active" href="">History</a>
+                      </ul>
+                      {% endif %}
+                  <a class="list-group-item list-group-item-action {% if value == 'nurses' %} active {% endif %}" href="/panel/nurses/show/">ICU Nurse</a>
+                      <!-- <ul class="list-group-item border-top-0">
+                          <a class="list-group-item list-group-item-action" href="">Manage</a>
+                      </ul> -->
+                  <a class="list-group-item list-group-item-action {% if value == 'patients' %} active {% endif %}" href="/panel/patients/show">ICU Patient</a>
+                  <!-- <ul class="list-group-item border-top-0">
+                    <a class="list-group-item list-group-item-action" href="">Manage</a>
+                  </ul> -->
+                  <a class="list-group-item list-group-item-action" href="">SMS</a>
+                  <a class="list-group-item list-group-item-action" href="">PAGER</a>
+                </ul>
+            </div>
+            <div class="col-md-9 content">
+              <div class="row">
+                  <div class="col-md-4">
+                      <a href="/panel/nurses/new/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Nurse <span class="iconify" data-icon="typcn-user-add-outline"></span></a>
+                  </div>
+                  <div class="col-md-4">
+                      <a href="/panel/beds/new/history/" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed History <span class="iconify" data-icon="typcn:calendar"></span></a>
+                  </div>
+                  <div class="col-md-4">
+                      <a href="/panel/beds/new" type="button" class="btn btn-outline-primary align-middle" role="button">Insert New Bed <span class="iconify" data-icon="typcn:beaker"></span></a>
+                  </div>
+              </div>
+              <br />
+              <div class="col-md-12 content">
+                <h2>Manage</h2>
+                <br />
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="save btn btn-success" type="submit" value="Update">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>

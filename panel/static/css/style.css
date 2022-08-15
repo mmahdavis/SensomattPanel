@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    width: 95%;
+    margin: auto;
+}
+div{
+    padding: 0px;
+    margin: 0px;
+}
+.logo{
+    padding: 5px;
+    width: 25%;
+    margin: auto;
+}
+.menu{
+    text-align: left;
+}
+.content{
+    margin-top: 1%;
+}
+.li a{
+    margin: 5px 0px;
+}
+table{
+    width: 100%;
+}
+form{
+    width: 50%;
+    margin: auto;
+}
+.img{
+  width: 125px;
+}
