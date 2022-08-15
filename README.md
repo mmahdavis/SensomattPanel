@@ -1,4 +1,4 @@
-# ![](./sensomatt.png)
+# ![](./Sensomatt.png)
 # WebApp
 <table>
 <tr>
